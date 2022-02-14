@@ -1,0 +1,90 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.lightgray {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.darkgray {
+  background-color: rgb(41, 39, 39);
+  color: #f1f1f1;
+}
+
+.orange {
+  background-color: rgb(255, 149, 0);
+  color: #f1f1f1;
+}
+
+.calculator-grid {
+  padding: 90px 10px 10px 10px;
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 680px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  border-radius: 30px;
+}
+
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none; 
+  outline: none;
+  margin: 6px;
+}
+
+.calculator-grid > button:hover {
+  opacity: 0.6;
+}
+
+.span-one {
+  border-radius: 50%;
+}
+
+.span-two {
+  grid-column: span 2;
+  border-radius: 48px;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: -60px;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 2rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 3rem;
+}
